@@ -27,4 +27,4 @@ jobs:
           name: Publish Docker Image to Hub
           command: |
             echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
-            docker push $deploy-demo:latest
+            docker push deploy-demo:latest
