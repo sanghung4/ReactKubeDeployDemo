@@ -10,8 +10,8 @@ workflows:
     jobs:
       - build:
           context: KubeDeployDemo
-      - kube-deploy:
-          context: KubeDeployDemo
+      # - kube-deploy:
+      #     context: KubeDeployDemo
 
 jobs:
   build:
