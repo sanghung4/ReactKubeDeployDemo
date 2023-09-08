@@ -31,19 +31,19 @@ jobs:
             echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
             docker push sanghung/deploy-demo:latest
   
-  kube-deploy:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - kubernetes/install
-      - kubernetes/create-or-update-resource:
-          get-rollout-status: true
-          resource-file-path: deployment.yml
-          resource-name: sanghung/deploy-demo:latest
-          show-kubectl-command: true
-      - kubernetes/create-or-update-resource:
-          get-rollout-status: true
-          resource-file-path: service.yml
-          resource-name: sanghung/deploy-demo:latest
-          show-kubectl-command: true
+  # kube-deploy:
+  #   docker:
+  #     - image: cimg/base:stable
+  #   steps:
+  #     - checkout
+  #     - kubernetes/install
+  #     - kubernetes/create-or-update-resource:
+  #         get-rollout-status: true
+  #         resource-file-path: deployment.yml
+  #         resource-name: sanghung/deploy-demo:latest
+  #         show-kubectl-command: true
+  #     - kubernetes/create-or-update-resource:
+  #         get-rollout-status: true
+  #         resource-file-path: service.yml
+  #         resource-name: sanghung/deploy-demo:latest
+  #         show-kubectl-command: true
