@@ -1,0 +1,10 @@
+{
+    "name": "React App Heroku Example",
+    "description": "A sample React app to demonstrate Heroku CI",
+    "scripts": {
+      "test": "npm test"
+    },
+    "env": {
+      "NODE_ENV": "test"
+    }
+  }
