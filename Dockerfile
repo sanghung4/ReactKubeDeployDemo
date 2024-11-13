@@ -1,8 +1,8 @@
 # Use node:19-alpine3.16 as the parent image for building the Docker image
 FROM node:19-alpine3.16
 
-# Install bash and curl, which is needed to install the Heroku CLI
-RUN apk update && apk add bash curl
+# Install bash, curl, and jq
+RUN apk update && apk add bash curl jq
 
 # Install the Heroku CLI
 RUN curl https://cli-assets.heroku.com/install.sh | sh
