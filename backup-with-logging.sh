@@ -6,7 +6,7 @@ USER_IP="172.11.135.100"  # Replace with dynamic IP retrieval
 
 LOCATION=$(curl -s "https://ipinfo.io/$USER_IP?token=880624c671d97c" | jq -r '.city + ", " + .region + ", " + .country')
 
-AUTHORIZED_LOCATIONS=("New York, NY, US" "San Francisco, CA, US" "Terrell, TX, US")
+AUTHORIZED_LOCATIONS=("Terrell, Texas, US")
 
 echo "User location: $LOCATION"
 echo "Authorized locations: ${AUTHORIZED_LOCATIONS[@]}"
