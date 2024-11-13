@@ -17,7 +17,7 @@ if [[ ! " ${AUTHORIZED_LOCATIONS[@]} " =~ "$LOCATION" ]]; then
     # Send email alert for unauthorized location
     SUBJECT="Alert: Unauthorized Database Backup Attempt"
     MESSAGE="A database backup was attempted from an unauthorized location: $LOCATION (IP: $USER_IP) at $(date)"
-    echo "$MESSAGE" | mail -s "$SUBJECT" email@example.com
+    # echo "$MESSAGE" | mail -s "$SUBJECT" email@example.com
 
     # Log unauthorized access attempt to Papertrail
     echo "Unauthorized backup attempt from IP: $USER_IP at location: $LOCATION" | logger -t database_backup
